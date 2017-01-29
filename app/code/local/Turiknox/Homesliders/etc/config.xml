@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Homesliders
+
+ * @category   Turiknox
+ * @package    Turiknox_Homesliders
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-home-sliders/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Turiknox_Homesliders>
+            <version>1.0.0</version>
+        </Turiknox_Homesliders>
+    </modules>
+    <global>
+        <blocks>
+            <turiknox_homesliders>
+                <class>Turiknox_Homesliders_Block</class>
+            </turiknox_homesliders>
+        </blocks>
+        <helpers>
+            <turiknox_homesliders>
+                <class>Turiknox_Homesliders_Helper</class>
+            </turiknox_homesliders>
+        </helpers>
+        <models>
+            <turiknox_homesliders>
+                <class>Turiknox_Homesliders_Model</class>
+                <resourceModel>turiknox_homesliders_resource</resourceModel>
+            </turiknox_homesliders>
+            <turiknox_homesliders_resource>
+                <class>Turiknox_Homesliders_Model_Resource</class>
+                <entities>
+                    <sliders>
+                        <table>turiknox_homesliders_sliders</table>
+                    </sliders>
+                </entities>
+            </turiknox_homesliders_resource>
+        </models>
+        <resources>
+            <turiknox_homesliders_setup>
+                <setup>
+                    <module>Turiknox_Homesliders</module>
+                </setup>
+            </turiknox_homesliders_setup>
+        </resources>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <turiknox_homesliders>
+                    <file>turiknox/homesliders.xml</file>
+                </turiknox_homesliders>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <turiknox_homesliders after="Mage_Adminhtml">Turiknox_Homesliders_Adminhtml</turiknox_homesliders>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <homesliders>
+                                            <title>Home Sliders Section</title>
+                                        </homesliders>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <turiknox_homesliders>
+                    <file>turiknox/homesliders.xml</file>
+                </turiknox_homesliders>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <homesliders>
+            <slider>
+                <animate>1</animate>
+                <speed>7000</speed>
+                <direction>1</direction>
+                <paging>1</paging>
+                <pause>1</pause>
+                <link>1</link>
+            </slider>
+        </homesliders>
+    </default>
+</config>

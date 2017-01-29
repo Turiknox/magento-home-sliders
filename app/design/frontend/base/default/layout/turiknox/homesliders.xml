@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Homesliders
+
+ * @category   Turiknox
+ * @package    Turiknox_Homesliders
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-home-sliders/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<layout>
+    <cms_index_index>
+        <reference name="head">
+            <action method="addItem" ifconfig="homesliders/general/jquery">
+                <type>js</type>
+                <name>homesliders/jquery-1.12.4.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type>
+                <name>homesliders/jquery.flexslider-min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>homesliders/css/flexslider.css</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="turiknox_homesliders/sliders" name="turiknox.homesliders.slider" as="homesliders"
+                   before="-" template="homesliders/sliders.phtml"/>
+        </reference>
+    </cms_index_index>
+</layout>

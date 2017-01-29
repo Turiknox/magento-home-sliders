@@ -1,0 +1,48 @@
+<?php
+/*
+ * Turiknox_Homesliders
+
+ * @category   Turiknox
+ * @package    Turiknox_Homesliders
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-home-sliders/LICENSE.md
+ * @version    1.0.0
+ */
+?>
+<?php if ($this->isEnabled()): ?>
+    <?php $_sliders = $this->getSlidersCollection(); ?>
+    <?php if ($_sliders->count() > 0): ?>
+        <div class="flexslider">
+            <ul class="slides">
+                <?php foreach ($_sliders as $_slider): ?>
+                <li>
+                    <?php if ($_slider->getUrl()): ?>
+                    <a href="<?php echo $this->escapeUrl($_slider->getUrl()); ?>" <?php if ($this->getLinkTarget()): ?> target="_blank" <?php endif; ?>>
+                    <?php endif; ?>
+                        <?php if ($image = $this->helper('turiknox_homesliders')->getImageUrl($_slider->getImage())): ?>
+                            <img src="<?php echo $image; ?>" alt="<?php echo $this->escapeHtml($_slider->getImageLabel()); ?>" />
+                        <?php endif; ?>
+                    <?php if ($_slider->getUrl()): ?>
+                    </a>
+                    <?php endif; ?>
+                    <?php if ($_slider->getHtml()): ?>
+                        <div class="html"><?php echo $_slider->getHtml() ?></div>
+                    <?php endif; ?>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <script>
+            jQuery(window).load(function() {
+                jQuery('.flexslider').flexslider({
+                    animation: 'slide',
+                    slideshow: <?php echo $this->getSlideshow() ? 'true' : 'false'; ?>,
+                    slideshowSpeed: <?php echo $this->getSlideshowSpeed(); ?>,
+                    directionNav: <?php echo $this->getDirectionNav() ? 'true' : 'false'; ?>,
+                    controlNav: <?php echo $this->getControlNav() ? 'true' : 'false'; ?>,
+                    pauseOnHover: <?php echo $this->getPauseOnHover() ? 'true' : 'false'; ?>
+                });
+            });
+        </script>
+    <?php endif; ?>
+<?php endif; ?>

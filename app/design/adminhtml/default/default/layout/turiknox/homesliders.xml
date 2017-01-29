@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Homesliders
+
+ * @category   Turiknox
+ * @package    Turiknox_Homesliders
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-home-sliders/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<layout>
+    <adminhtml_homesliders_index>
+        <reference name="content">
+            <block type="turiknox_homesliders/adminhtml_sliders" name="turiknox.adminhtml.sliders"/>
+        </reference>
+    </adminhtml_homesliders_index>
+    <adminhtml_homesliders_edit>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="turiknox_homesliders/adminhtml_sliders_edit" name="turiknox.adminhtml.sliders.edit"/>
+        </reference>
+    </adminhtml_homesliders_edit>
+</layout>
