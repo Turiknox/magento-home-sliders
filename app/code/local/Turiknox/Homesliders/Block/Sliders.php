@@ -5,7 +5,7 @@
  * @category   Turiknox
  * @package    Turiknox_Homesliders
  * @copyright  Copyright (c) 2017 Turiknox
- * @license    https://github.com/turiknox/magento-home-sliders/LICENSE.md
+ * @license    https://github.com/turiknox/magento-home-sliders/blob/master/LICENSE.md
  * @version    1.0.0
  */
 class Turiknox_Homesliders_Block_Sliders extends Mage_Core_Block_Template
