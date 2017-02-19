@@ -1,0 +1,10 @@
+{
+  "name": "turkinox/magento-home-sliders",
+  "license": "MIT",
+  "type": "magento-module",
+  "description": "A Magento module that will allow you to add a jQuery slider to your home page with the ability to upload sliders in the admin.",
+  "homepage": "https://github.com/Turiknox/magento-home-sliders",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

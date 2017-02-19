@@ -1,0 +1,7 @@
+app/code/local/Turiknox/Homesliders app/code/local/Turiknox/Homesliders
+app/design/adminhtml/default/default/layout/turiknox/homesliders.xml
+app/design/frontend/base/default/layout/turiknox/homesliders.xml app/design/frontend/base/default/layout/turiknox/homesliders.xml
+app/design/frontend/base/default/template/homesliders app/design/frontend/base/default/template/homesliders
+app/etc/modules/Turiknox_Homesliders.xml app/etc/modules/Turiknox_Homesliders.xml
+js/homesliders js/homesliders
+skin/frontend/base/default/homesliders skin/frontend/base/default/homesliders
