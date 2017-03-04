@@ -14,7 +14,7 @@
     <modules>
         <Turiknox_Homesliders>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Turiknox_Homesliders>
     </modules>
 </config>
